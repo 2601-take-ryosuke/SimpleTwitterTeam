@@ -31,8 +31,10 @@ public class TopServlet extends HttpServlet {
 
         String searchWord = request.getParameter("word");
         String radiobutton = request.getParameter("radiobutton");
+
 		String userId = request.getParameter("user_id");
 		String start = request.getParameter("start");
+
         String end = request.getParameter("end");
         List<UserMessage> messages = new MessageService().select(userId, start, end, searchWord, radiobutton);
 

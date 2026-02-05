@@ -26,7 +26,9 @@ public class UserMessageDao {
 			sql.append(" messages.user_id as user_id, ");
 			sql.append(" users.account as account, ");
 			sql.append(" users.name as name, ");
+
 			sql.append(" messages.created_date as created_date ");  sql.append("FROM messages ");
+
 			sql.append("INNER JOIN users ");
 			sql.append("ON messages.user_id = users.id ");
 			sql.append("WHERE messages.created_date BETWEEN ? AND ? ");
